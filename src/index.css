@@ -9,3 +9,9 @@
   height: 100vh;
   display: flex;
 }
+
+.left-side-bar {
+  width: 16.5%;
+  height: 100%;
+  border-right: 0.12vw solid gainsboro;
+}
