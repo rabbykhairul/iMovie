@@ -71,3 +71,28 @@ export const LIBRARY = {
   ]
 };
 
+export const CATEGORY = {
+  title: "Category",
+  items: 
+  [
+    {
+      id: getMenuId(),
+      label: "TV - Show",
+      icon: TiThLarge,
+      path: "/"
+    },
+    {
+      id: getMenuId(),
+      label: "Movie",
+      icon: IoVideocam,
+      path: "/"
+    },
+    {
+      id: getMenuId(),
+      label: "Anime",
+      icon: RiCompass4Fill,
+      path: "/"
+    },
+  ]
+};
+
