@@ -46,3 +46,28 @@ export const MAIN_MENU = {
   ]
 };
 
+export const LIBRARY = {
+  title: "Library",
+  items: 
+  [
+    {
+      id: getMenuId(),
+      label: "Recent",
+      icon: AiFillClockCircle,
+      path: "/"
+    },
+    {
+      id: getMenuId(),
+      label: "Top Rated",
+      icon: AiFillStar,
+      path: "/"
+    },
+    {
+      id: getMenuId(),
+      label: "Downloaded",
+      icon: IoIosDownload,
+      path: "/"
+    },
+  ]
+};
+
