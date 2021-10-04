@@ -19,6 +19,18 @@ header {
   cursor: pointer;
 }
 
+button {
+  background-color: rgb(254, 231, 239);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.75vw 0;
+  font-weight: 700;
+  font-size: 0.75vw;
+  letter-spacing: 0.025vw;
+  color: rgb(238, 82, 142);
+}
+
 .parent-container {
   width: 100vw;
   height: 100vh;
