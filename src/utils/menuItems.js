@@ -96,3 +96,21 @@ export const CATEGORY = {
   ]
 };
 
+export const GENERAL = {
+  title: "General",
+  items: 
+  [
+    {
+      id: getMenuId(),
+      label: "Settings",
+      icon: RiSettings5Fill,
+      path: "/"
+    },
+    {
+      id: getMenuId(),
+      label: "Log Out",
+      icon: IoExit,
+      path: "/"
+    },
+  ]
+};
