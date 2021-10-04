@@ -13,7 +13,7 @@ header {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 700;
   font-size: 1.4vw;
-  height: 8.5vh;
+  height: 3.5vw;
   display: flex;
   align-items: flex-end;
   cursor: pointer;
@@ -28,7 +28,39 @@ button {
   font-weight: 700;
   font-size: 0.75vw;
   letter-spacing: 0.025vw;
-  color: rgb(238, 82, 142);
+  color: rgb(255, 47, 127);
+}
+
+.nav-button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0.5vw 0;
+  border-right: 0.25vw solid;
+  border-right-color: rgba(255, 47, 127, 0);
+  letter-spacing: 0.1vw;
+  transition: color, letter-spacing 0.35s ease-in-out;
+}
+
+.nav-button-icon {
+  font-size: 1.35vw;
+}
+
+.nav-button span {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  padding-left: 7.5%;
+}
+
+.nav-button:hover {
+  border-right-color:rgb(255, 47, 127);
+  color:rgb(255, 47, 127);
+  letter-spacing: 0.15vw;
+}
+
+.nav-button-selected {
+  border-right-color:rgb(255, 47, 127);
+  color:rgb(255, 47, 127);
 }
 
 .parent-container {
@@ -42,4 +74,18 @@ button {
   height: 100%;
   border-right: 0.1vw solid rgba(220, 220, 220, 0.65);
   padding-left: 3%;
+  position: relative;
+}
+
+.list-nav {
+  margin: 1vw 0 1vw 0;
+}
+
+.list-nav h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.65vw;
+  font-weight: 700;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
+  margin-bottom: 1vw;
 }
