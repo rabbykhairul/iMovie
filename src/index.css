@@ -77,6 +77,12 @@ button {
   position: relative;
 }
 
+.grouped-menu-container {
+  margin-top: 2vh;
+  width: 82.75%;
+  position: absolute;
+}
+
 .list-nav {
   margin: 1vw 0 1vw 0;
 }
