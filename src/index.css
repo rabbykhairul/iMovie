@@ -67,6 +67,7 @@ button {
   width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: space-between;
 }
 
 .left-side-bar {
@@ -94,4 +95,15 @@ button {
   letter-spacing: 0.1vw;
   text-transform: uppercase;
   margin-bottom: 1vw;
+}
+
+.right-side-bar {
+  width: 20.5%;
+  height: 100%;
+  border-left: 0.1vw solid rgba(220, 220, 220, 0.65);
+  padding: 2.05vw 1.35%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
