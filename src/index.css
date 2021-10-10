@@ -122,3 +122,17 @@ button {
   font-size: 1.5vw;
 }
 
+#searchString {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding-left: 3.5%;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.75vw;
+  letter-spacing: 0.05vw;
+}
+
+#searchString:focus {
+  outline: none;
+}
