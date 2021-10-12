@@ -101,11 +101,27 @@ button {
   width: 20.5%;
   height: 100%;
   border-left: 0.1vw solid rgba(220, 220, 220, 0.65);
-  padding: 2.05vw 1.35%;
+  padding: 2.05vw 1.35% 0 1.35%;;
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inner-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: scroll;
+  margin-top: 1.75vw;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.inner-container::-webkit-scrollbar {
+  display: none;
 }
 
 .search-bar {
@@ -135,4 +151,79 @@ button {
 
 #searchString:focus {
   outline: none;
+}
+
+.watch-recommendations-list {
+  margin-bottom: 1.75vw;
+}
+
+.watch-recommendation-title-section {
+  margin-bottom: 1.25vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.recommendation-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05vw;
+  font-size: 0.75vw;
+  width: 85%;
+}
+
+.recommendation-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.15vw;
+}
+
+.image-section {
+  width: 23%;
+  height: 3vh;
+}
+
+.info-section {
+  width: 73.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05vw;
+  font-size: 0.75vw;
+  color: rgb(77, 78, 97);
+  margin-top: 0.4vw;
+  width: 78%;
+}
+
+.info-header p {
+  margin-bottom: 0 !important;
+}
+
+.info-section p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05vw;
+  font-size: 0.7vw;
+  color: rgb(163, 168, 172);
+  margin: 0.4vw 0 0.75vw 0;
+}
+
+.star-div {
+  margin-right: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.star {
+  color: gold;
+  font-size: 1.1vw;
 }
