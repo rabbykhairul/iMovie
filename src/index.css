@@ -227,3 +227,22 @@ button {
   color: gold;
   font-size: 1.1vw;
 }
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-item {
+  width: fit-content;
+  padding: 0.35vw 1.35vw 0 0;
+  background-color: transparent;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  letter-spacing: 0.1vw;
+}
+
+.tab-active {
+  color: rgb(50, 50, 50);
+}
