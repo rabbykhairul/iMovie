@@ -20,3 +20,16 @@ export const getLatestShow = async (type) => {
   }
 };
 
+export const getNowPlayingShows = async (type) => {
+  try {
+    const nowPlaying = type === "movie" ? "now_playing" : "airing_today";
+    const { data: nowPlayingShows } = await http.get(
+      `${API_BASE_URL}/${type}/${nowPlaying}?${API_KEY_QUERY_STRING}`
+    );
+
+    return nowPlayingShows.results;
+  } catch (err) {
+    console.log(`Error in getting now playing ${type}s: ${err}`);
+  }
+};
+
