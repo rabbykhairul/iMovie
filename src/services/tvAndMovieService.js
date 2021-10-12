@@ -33,3 +33,14 @@ export const getNowPlayingShows = async (type) => {
   }
 };
 
+export const getMostPopularShows = async (type) => {
+  try {
+    const { data: popularShows } = await http.get(
+      `${API_BASE_URL}/${type}/popular?${API_KEY_QUERY_STRING}`
+    );
+
+    return popularShows.results;
+  } catch (err) {
+    console.log(`Error in getting most popular ${type}s: ${err}`);
+  }
+};
