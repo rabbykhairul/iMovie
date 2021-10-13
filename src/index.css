@@ -331,3 +331,10 @@ button {
   padding: 0 0.85vw;
   font-size: 1.75vw;
 }
+
+.featured-show-season {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1vw;
+  color: rgb(93 93 98 / 60%);
+}
