@@ -311,3 +311,15 @@ button {
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
   border-radius: 1vw;
 }
+
+.btn-watch-now {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.65vw 2.5vw;
+  margin-right: 1vw;
+  background-color: rgb(255, 47, 127);
+  color: white;
+  letter-spacing: 0.1vw;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+}
