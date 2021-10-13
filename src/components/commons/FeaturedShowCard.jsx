@@ -1,4 +1,5 @@
-import React, { createRef, useEffect } from "react";
+import React, { createRef, useEffect, useState } from "react";
+import { getLatestSeason, TYPE_TV } from "../../services/tvAndMovieService";
 import { buildImageURL, WIDTH_1280 } from "../../utils/URLBuilder";
 import AddToWishlistButton from "./AddToWishlistButton";
 import ContentLoadingCardHorizontal from "./loaders/ContentLoadingCardHorizontal";
@@ -8,13 +9,15 @@ let timer = null;
 
 const FeaturedShowCard = ({ featuredShow }) => {
   const {
+    id,
     title = "",
     genres = [],
-    latestSeason = "Season 10",
+    type,
     backdrop_path,
   } = featuredShow || {};
 
   const featuredCardRef = createRef(null);
+  const [latestSeason, setLatestSeason] = useState("");
 
   useEffect(() => {
     clearTimeout(timer);
@@ -23,16 +26,22 @@ const FeaturedShowCard = ({ featuredShow }) => {
       () => featuredCardRef?.current?.classList.remove("swing-in-top-bck"),
       500
     );
+
+    setLatestSeason("");
+    if (type === TYPE_TV) loadLatestSeason();
     // eslint-disable-next-line
   }, [featuredShow]);
+
+  const loadLatestSeason = async () => {
+    const latestSeason = await getLatestSeason(id);
+    setLatestSeason(latestSeason);
+  };
 
   const renderLoading = () => <ContentLoadingCardHorizontal />;
 
   const renderSeason = () => {
     if (latestSeason)
-      return (
-        <p className="featured-show-season">{latestSeason.toUpperCase()}</p>
-      );
+      return <p className="featured-show-season">SEASON {latestSeason}</p>;
     else return null;
   };
 
