@@ -323,3 +323,11 @@ button {
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 400;
 }
+
+.btn-add-to-wishlist {
+  width: fit-content;
+  background-color: rgb(93 93 98 / 40%);
+  color: white;
+  padding: 0 0.85vw;
+  font-size: 1.75vw;
+}
