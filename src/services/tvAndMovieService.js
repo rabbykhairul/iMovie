@@ -41,6 +41,22 @@ export const getMovieContentRating = async (movieId) => {
   } catch {}
 };
 
+export const getTVContentRating = async (tvId) => {
+  try {
+    const {
+      data: { results },
+    } = await http.get(
+      `${API_BASE_URL}/tv/${tvId}/content_ratings?${API_KEY_QUERY_STRING}`
+    );
+
+    return results.reduce((rating, ratingInfo) => {
+      return ratingInfo.iso_3166_1 === "US" && ratingInfo.rating
+        ? ratingInfo.rating
+        : rating;
+    }, "NR");
+  } catch {}
+};
+
 export const getLatestShow = async (type) => {
   try {
     const { data: latest } = await http.get(
