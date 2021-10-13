@@ -225,7 +225,11 @@ button {
 
 .star {
   color: gold;
-  font-size: 1.1vw;
+  font-size: 1.15vw;
+}
+
+.star-grey {
+  color: rgb(93 93 98 / 40%);
 }
 
 .content-section {
