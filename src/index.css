@@ -275,3 +275,8 @@ button {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+.content-loading-card-small {
+  height: 9vh;
+  box-shadow: none;
+}
