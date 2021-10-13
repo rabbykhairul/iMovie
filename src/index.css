@@ -257,3 +257,9 @@ button {
 .tab-active {
   color: rgb(25, 25, 25);
 }
+
+.featured-content-card {
+  width: 100%;
+  height: 33.5%;
+  margin-top: 2%;
+}
