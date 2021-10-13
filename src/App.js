@@ -27,7 +27,12 @@ function App() {
     const nowPlayingShows = await getNowPlayingShows(TYPE_MOVIE);
     const popularShows = await getMostPopularShows(TYPE_MOVIE);
 
-    setMoviesInfo({ latestShow, nowPlayingShows, popularShows });
+    setMoviesInfo({
+      latestShow,
+      featuredShow: latestShow,
+      nowPlayingShows,
+      popularShows,
+    });
   };
 
   const loadTVInfo = async () => {
@@ -35,7 +40,12 @@ function App() {
     const nowPlayingShows = await getNowPlayingShows(TYPE_TV);
     const popularShows = await getMostPopularShows(TYPE_TV);
 
-    setTVInfo({ latestShow, nowPlayingShows, popularShows });
+    setTVInfo({
+      latestShow,
+      featuredShow: latestShow,
+      nowPlayingShows,
+      popularShows,
+    });
   };
 
   return (
