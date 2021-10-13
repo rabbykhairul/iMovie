@@ -15,6 +15,11 @@ const ContentSection = () => {
 
   const [activeTab, setActiveTab] = useState(TABS[0]);
 
+  const getFeaturedShow = () => {
+    if (activeTab.name === TYPE_MOVIE) return movieInfo.featuredShow;
+    else return tvInfo.featuredShow;
+  };
+
   return (
     <div className="content-section">
       <TabList
