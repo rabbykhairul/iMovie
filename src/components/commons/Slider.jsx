@@ -1,15 +1,37 @@
 import React, { useState } from "react";
 import ContentLoadingCardHorizontal from "./loaders/ContentLoadingCardHorizontal";
 
+import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
+
 const Slider = (props) => {
   const { title = "Now Playing", items = [], itemsPerSlide = 4 } = props;
 
   const [activeSlideIdx, setActiveSlideIdx] = useState(0);
 
+  const updateActiveSlideIdx = (direction) => {
+    const totalSlides = Math.ceil(items.length / itemsPerSlide);
+
+    let newSlideIdx = activeSlideIdx + direction;
+    if (newSlideIdx < 0) newSlideIdx = totalSlides - 1;
+    else if (newSlideIdx === totalSlides) newSlideIdx = 0;
+
+    setActiveSlideIdx(newSlideIdx);
+  };
+
   const renderSliderHeader = () => {
     return (
       <div className="slider-header">
         <h2 className="slider-title">{title}</h2>
+        <div>
+          <BsArrowLeftCircle
+            className="slider-control"
+            onClick={() => updateActiveSlideIdx(-1)}
+          />
+          <BsArrowRightCircle
+            className="slider-control"
+            onClick={() => updateActiveSlideIdx(1)}
+          />
+        </div>
       </div>
     );
   };
