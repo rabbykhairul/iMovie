@@ -57,6 +57,18 @@ export const getTVContentRating = async (tvId) => {
   } catch {}
 };
 
+export const getLatestSeason = async (tvId) => {
+  try {
+    const { data: tvShowInfo } = await http.get(
+      `${API_BASE_URL}/tv/${tvId}?${API_KEY_QUERY_STRING}`
+    );
+
+    return tvShowInfo.last_episode_to_air.season_number;
+  } catch (err) {
+    console.log(`Error in getting TV show ${tvId}: ${err}`);
+  }
+};
+
 export const getLatestShow = async (type) => {
   try {
     const { data: latest } = await http.get(
