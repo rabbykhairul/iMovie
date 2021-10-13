@@ -6,6 +6,7 @@ import TabList from "./commons/TabList";
 import FeaturedShowcard from "./commons/FeaturedShowCard";
 import Slider from "./commons/Slider";
 import InfoCardVertical from "./commons/InfoCardVertical";
+import InfoCardHorizontal from "./commons/InfoCardHorizontal";
 
 const TABS = [
   { title: "Movie", name: TYPE_MOVIE },
@@ -50,6 +51,44 @@ const ContentSection = () => {
     else return [];
   };
 
+  const getPopularMovies = () => {
+    if (movieInfo.popularShows)
+      return movieInfo.popularShows.map((movie, idx) => (
+        <InfoCardHorizontal
+          key={idx}
+          info={movie}
+          onClick={() => setFeaturedMovie(movie)}
+        />
+      ));
+    else return [];
+  };
+
+  const getPopularTV = () => {
+    if (tvInfo.popularShows)
+      return tvInfo.popularShows.map((tvShow, idx) => (
+        <InfoCardHorizontal
+          key={idx}
+          info={tvShow}
+          onClick={() => setFeaturedTV(tvShow)}
+        />
+      ));
+    else return [];
+  };
+  const renderPopularShows = () => {
+    if (activeTab.name === TYPE_MOVIE)
+      return (
+        <Slider
+          title="Top Rated"
+          items={getPopularMovies()}
+          itemsPerSlide={3}
+        />
+      );
+    else
+      return (
+        <Slider title="Top Rated" items={getPopularTV()} itemsPerSlide={3} />
+      );
+  };
+
   const renderNowPlayingShows = () => {
     if (activeTab.name === TYPE_MOVIE)
       return <Slider title="Now Playing" items={getNowPlayingMovies()} />;
@@ -66,6 +105,7 @@ const ContentSection = () => {
         />
         <FeaturedShowcard featuredShow={getFeaturedShow()} />
         {renderNowPlayingShows()}
+        {renderPopularShows()}
       </div>
     </div>
   );
