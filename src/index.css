@@ -338,3 +338,10 @@ button {
   letter-spacing: 0.1vw;
   color: rgb(93 93 98 / 60%);
 }
+
+.featured-show-title {
+  font-size: 1.45rem;
+  letter-spacing: 0.1vw;
+  color: rgb(115 115 115);
+  margin: 0.65vw 0;
+}
