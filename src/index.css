@@ -388,6 +388,7 @@ button {
   justify-content: space-between;
 }
 
+.info-card-horizontal,
 .info-card-vertical {
   background-color: rgb(235, 235, 235);
   background-size: cover;
@@ -426,4 +427,19 @@ button {
   border-radius: 50%;
   font-size: 1.25vw;
   cursor: pointer;
+}
+
+.info-card-horizontal {
+  width: 32%;
+  height: 23vh;
+  color: white;
+}
+
+.info-card-horizontal h3 {
+  position: absolute;
+  font-size: 0.75rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  letter-spacing: 0.05vw;
+  bottom: 15%;
+  margin: 0 0.8rem;
 }
