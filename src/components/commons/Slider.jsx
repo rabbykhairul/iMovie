@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContentLoadingCardHorizontal from "./loaders/ContentLoadingCardHorizontal";
 
-import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const Slider = (props) => {
   const { title = "Now Playing", items = [], itemsPerSlide = 4 } = props;
@@ -23,11 +23,11 @@ const Slider = (props) => {
       <div className="slider-header">
         <h2 className="slider-title">{title}</h2>
         <div>
-          <BsArrowLeftCircle
+          <IoIosArrowBack
             className="slider-control"
             onClick={() => updateActiveSlideIdx(-1)}
           />
-          <BsArrowRightCircle
+          <IoIosArrowForward
             className="slider-control"
             onClick={() => updateActiveSlideIdx(1)}
           />
