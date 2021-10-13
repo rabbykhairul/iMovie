@@ -280,3 +280,23 @@ button {
   height: 9vh;
   box-shadow: none;
 }
+
+.line {
+  background-color: rgb(235, 235, 235);
+  border-radius: 0.75vw;
+  height: 10.5%;
+}
+
+.line-sm {
+  width: 25%;
+}
+
+.line-lg {
+  width: 50%;
+  height: 13.5%;
+}
+
+.line-md {
+  width: 35%;
+  height: 11.5%;
+}
