@@ -2,7 +2,7 @@ import React from "react";
 import StarRating from "./StarRating";
 
 const RecommendationCard = (props) => {
-  const { title, label, genres, rating } = props;
+  const { title, label, genres, rating } = props.info;
 
   const renderImage = () => <div className="image-section"></div>;
 
