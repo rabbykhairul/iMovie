@@ -180,7 +180,11 @@ button {
 
 .image-section {
   width: 23%;
-  height: 3vh;
+  height: 100%;
+}
+
+.image-section img {
+  width: 100%;
 }
 
 .info-section {
