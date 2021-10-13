@@ -1,7 +1,5 @@
 import React from "react";
 import { buildImageURL, WIDTH_780 } from "../../utils/URLBuilder";
-import AddToWishlistButton from "./AddToWishlistButton";
-import WatchNowButton from "./WatchNowButton";
 
 const InfoCardHorizontal = ({ info, onClick = () => {} }) => {
   const { title, release_date, first_air_date, backdrop_path } = info;

@@ -23,6 +23,7 @@ const FeaturedShowCard = ({ featuredShow }) => {
       () => featuredCardRef?.current?.classList.remove("swing-in-top-bck"),
       500
     );
+    // eslint-disable-next-line
   }, [featuredShow]);
 
   const renderLoading = () => <ContentLoadingCardHorizontal />;
