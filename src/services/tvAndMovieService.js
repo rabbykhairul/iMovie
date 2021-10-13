@@ -1,3 +1,4 @@
+import { formatMovieTVDetails } from "../utils/dataFormatter";
 import http from "./httpService";
 
 const { REACT_APP_API_BASE_URL: API_BASE_URL, REACT_APP_API_KEY: API_KEY } =
@@ -14,7 +15,7 @@ export const getLatestShow = async (type) => {
       `${API_BASE_URL}/${type}/latest?${API_KEY_QUERY_STRING}`
     );
 
-    return latest;
+    return formatMovieTVDetails(latest);
   } catch (err) {
     console.log(`Error in getting latest ${type}: ${err}`);
   }
@@ -27,7 +28,9 @@ export const getNowPlayingShows = async (type) => {
       `${API_BASE_URL}/${type}/${nowPlaying}?${API_KEY_QUERY_STRING}`
     );
 
-    return nowPlayingShows.results;
+    return nowPlayingShows.results.map((result) =>
+      formatMovieTVDetails(result)
+    );
   } catch (err) {
     console.log(`Error in getting now playing ${type}s: ${err}`);
   }
@@ -39,7 +42,7 @@ export const getMostPopularShows = async (type) => {
       `${API_BASE_URL}/${type}/popular?${API_KEY_QUERY_STRING}`
     );
 
-    return popularShows.results;
+    return popularShows.results.map((result) => formatMovieTVDetails(result));
   } catch (err) {
     console.log(`Error in getting most popular ${type}s: ${err}`);
   }
