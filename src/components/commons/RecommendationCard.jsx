@@ -13,7 +13,7 @@ const RecommendationCard = (props) => {
         <p>{label}</p>
       </div>
       <p>{genres.join(", ")}</p>
-      <StarRating />
+      <StarRating rating={rating} />
     </div>
   );
 
