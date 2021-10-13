@@ -7,7 +7,7 @@ const InfoCardVertical = ({ info, onClick = () => {} }) => {
   const { poster_path } = info;
   return (
     <div
-      className="info-card-vertical"
+      className="info-card-vertical swing-in-left-fwd"
       onClick={onClick}
       style={
         poster_path
