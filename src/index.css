@@ -244,10 +244,11 @@ button {
   background-color: transparent;
   font-family: 'Merriweather Sans', sans-serif;
   font-weight: 700;
-  font-size: 1vw;
+  font-size: 0.8vw;
   letter-spacing: 0.1vw;
+  color: rgb(163, 168, 172);
 }
 
 .tab-active {
-  color: rgb(50, 50, 50);
+  color: rgb(25, 25, 25);
 }
