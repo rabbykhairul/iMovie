@@ -28,9 +28,9 @@ export const getNowPlayingShows = async (type) => {
       `${API_BASE_URL}/${type}/${nowPlaying}?${API_KEY_QUERY_STRING}`
     );
 
-    return nowPlayingShows.results.map((result) =>
-      formatMovieTVDetails(result)
-    );
+    return nowPlayingShows.results
+      .slice(0, 12)
+      .map((result) => formatMovieTVDetails(result));
   } catch (err) {
     console.log(`Error in getting now playing ${type}s: ${err}`);
   }
@@ -42,7 +42,9 @@ export const getMostPopularShows = async (type) => {
       `${API_BASE_URL}/${type}/popular?${API_KEY_QUERY_STRING}`
     );
 
-    return popularShows.results.map((result) => formatMovieTVDetails(result));
+    return popularShows.results
+      .slice(0, 12)
+      .map((result) => formatMovieTVDetails(result));
   } catch (err) {
     console.log(`Error in getting most popular ${type}s: ${err}`);
   }
