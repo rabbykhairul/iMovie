@@ -1,14 +1,18 @@
 import React from "react";
 import { BsFillStarFill } from "react-icons/bs";
 
-const StarRating = () => {
+const FIVE_STAR_VALUES = [1, 2, 3, 4, 5];
+
+const StarRating = ({ rating = 0 }) => {
   return (
     <div className="star-div">
-      <BsFillStarFill className="star" />
-      <BsFillStarFill className="star" />
-      <BsFillStarFill className="star" />
-      <BsFillStarFill className="star" />
-      <BsFillStarFill className="star" />
+      {FIVE_STAR_VALUES.map((starValue) =>
+        starValue <= rating ? (
+          <BsFillStarFill className="star" />
+        ) : (
+          <BsFillStarFill className="star star-grey" />
+        )
+      )}
     </div>
   );
 };
