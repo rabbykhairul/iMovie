@@ -1,8 +1,10 @@
-import React from "react";
+import React, { createRef, useEffect } from "react";
 import { buildImageURL, WIDTH_1280 } from "../../utils/URLBuilder";
 import AddToWishlistButton from "./AddToWishlistButton";
 import ContentLoadingCardHorizontal from "./loaders/ContentLoadingCardHorizontal";
 import WatchNowButton from "./WatchNowButton";
+
+let timer = null;
 
 const FeaturedShowCard = ({ featuredShow }) => {
   const {
@@ -11,6 +13,18 @@ const FeaturedShowCard = ({ featuredShow }) => {
     latestSeason = "Season 10",
     backdrop_path,
   } = featuredShow || {};
+
+  const featuredCardRef = createRef(null);
+
+  useEffect(() => {
+    clearTimeout(timer);
+    featuredCardRef?.current?.classList.add("swing-in-top-bck");
+    timer = setTimeout(
+      () => featuredCardRef?.current?.classList.remove("swing-in-top-bck"),
+      500
+    );
+    // eslint-disable-next-line
+  }, [featuredShow]);
 
   const renderLoading = () => <ContentLoadingCardHorizontal />;
 
@@ -50,6 +64,7 @@ const FeaturedShowCard = ({ featuredShow }) => {
 
   return (
     <div
+      ref={featuredCardRef}
       className="featured-content-card"
       style={
         featuredShow
