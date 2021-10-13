@@ -1,4 +1,5 @@
 import React from "react";
+import { buildImageURL, WIDTH_1280 } from "../../utils/URLBuilder";
 import AddToWishlistButton from "./AddToWishlistButton";
 import ContentLoadingCardHorizontal from "./loaders/ContentLoadingCardHorizontal";
 import WatchNowButton from "./WatchNowButton";
@@ -8,6 +9,7 @@ const FeaturedShowCard = ({ featuredShow }) => {
     title = "",
     genres = [],
     latestSeason = "Season 10",
+    backdrop_path,
   } = featuredShow || {};
 
   const renderLoading = () => <ContentLoadingCardHorizontal />;
@@ -47,7 +49,19 @@ const FeaturedShowCard = ({ featuredShow }) => {
   };
 
   return (
-    <div className="featured-content-card">
+    <div
+      className="featured-content-card"
+      style={
+        featuredShow
+          ? {
+              backgroundImage: `url('${buildImageURL(
+                backdrop_path,
+                WIDTH_1280
+              )}')`,
+            }
+          : {}
+      }
+    >
       {!featuredShow && renderLoading()}
       {featuredShow && renderFeaturedShowInfo()}
     </div>

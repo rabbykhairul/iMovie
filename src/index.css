@@ -180,7 +180,11 @@ button {
 
 .image-section {
   width: 23%;
-  height: 3vh;
+  height: 100%;
+}
+
+.image-section img {
+  width: 100%;
 }
 
 .info-section {
@@ -260,8 +264,10 @@ button {
 
 .featured-content-card {
   width: 100%;
-  height: 33.5%;
+  height: 35.5%;
   margin-top: 2%;
+  background-color: white;
+  background-size: cover;
 }
 
 .content-loading-card-horizontal {
@@ -308,8 +314,8 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   padding: 2.75% 5%;
-  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
-  border-radius: 1vw;
+  background-color: #00000029;
+  color: white;
 }
 
 .btn-watch-now {
@@ -336,13 +342,11 @@ button {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1vw;
-  color: rgb(93 93 98 / 60%);
 }
 
 .featured-show-title {
   font-size: 1.45rem;
   letter-spacing: 0.1vw;
-  color: rgb(115 115 115);
   margin: 0.65vw 0;
 }
 
@@ -350,6 +354,5 @@ button {
   font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.1vw;
-  color: rgb(93 93 98 / 60%);
   margin-bottom: 1.35vw;
 }
