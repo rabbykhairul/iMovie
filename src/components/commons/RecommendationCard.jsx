@@ -19,6 +19,7 @@ const RecommendationCard = (props) => {
 
   const [contentRating, setContentRating] = useState("");
 
+  // eslint-disable-next-line
   useEffect(() => loadContentRating(), []);
 
   const loadContentRating = async () => {
