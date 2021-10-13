@@ -8,7 +8,7 @@ const InfoCardHorizontal = ({ info, onClick = () => {} }) => {
   const releaseYear = (release_date || first_air_date).split("-")[0];
   return (
     <div
-      className="info-card-horizontal"
+      className="info-card-horizontal swing-in-left-fwd"
       onClick={onClick}
       style={
         backdrop_path
