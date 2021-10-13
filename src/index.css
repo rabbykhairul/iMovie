@@ -237,6 +237,7 @@ button {
   padding: 2% 2.5%;
 }
 
+.btn-row,
 .tab-list {
   display: flex;
   flex-wrap: wrap;
