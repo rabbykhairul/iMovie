@@ -35,6 +35,7 @@ export const formatMovieTVDetails = (data, type) => {
     type
   );
   formattedData.rating = Math.ceil(formattedData.vote_average / 2);
+  formattedData.type = type;
 
   return formattedData;
 };
