@@ -8,6 +8,7 @@ import {
   getLatestShow,
   getMostPopularShows,
   getNowPlayingShows,
+  loadGenres,
   TYPE_MOVIE,
   TYPE_TV,
 } from "./services/tvAndMovieService";
@@ -23,6 +24,7 @@ function App() {
   }, []);
 
   const loadMoviesInfo = async () => {
+    await loadGenres(TYPE_MOVIE);
     const latestShow = await getLatestShow(TYPE_MOVIE);
     const nowPlayingShows = await getNowPlayingShows(TYPE_MOVIE);
     const popularShows = await getMostPopularShows(TYPE_MOVIE);
@@ -36,6 +38,7 @@ function App() {
   };
 
   const loadTVInfo = async () => {
+    await loadGenres(TYPE_TV);
     const latestShow = await getLatestShow(TYPE_TV);
     const nowPlayingShows = await getNowPlayingShows(TYPE_TV);
     const popularShows = await getMostPopularShows(TYPE_TV);

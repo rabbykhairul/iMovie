@@ -26,7 +26,7 @@ button {
   width: 100%;
   padding: 0.75vw 0;
   font-weight: 700;
-  font-size: 0.75vw;
+  font-size: 0.7rem;
   letter-spacing: 0.025vw;
   color: rgb(255, 47, 127);
 }
@@ -338,10 +338,10 @@ button {
 
 .btn-add-to-wishlist {
   width: fit-content;
-  background-color: rgb(93 93 98 / 40%);
+  background-color: rgb(100 100 100 / 60%);
   color: white;
   padding: 0 0.85vw;
-  font-size: 1.75vw;
+  font-size: 1.5rem;
 }
 
 .featured-show-season {
@@ -351,13 +351,13 @@ button {
 }
 
 .featured-show-title {
-  font-size: 1.45rem;
+  font-size: 1.7rem;
   letter-spacing: 0.1vw;
   margin: 0.65vw 0;
 }
 
 .featured-show-genres {
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1vw;
   margin-bottom: 1.35vw;
@@ -372,6 +372,7 @@ button {
 .slider-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 1.25vw;
 }
 
@@ -422,10 +423,11 @@ button {
 
 .slider-control {
   color: rgb(25, 25, 25);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   margin-left: 1vw;
   border-radius: 50%;
-  font-size: 1.25vw;
+  font-size: 1.85vw;
+  padding: 0.35vw;
   cursor: pointer;
 }
 

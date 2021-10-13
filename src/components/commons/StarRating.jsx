@@ -8,9 +8,9 @@ const StarRating = ({ rating = 0 }) => {
     <div className="star-div">
       {FIVE_STAR_VALUES.map((starValue) =>
         starValue <= rating ? (
-          <BsFillStarFill className="star" />
+          <BsFillStarFill key={starValue} className="star" />
         ) : (
-          <BsFillStarFill className="star star-grey" />
+          <BsFillStarFill key={starValue} className="star star-grey" />
         )
       )}
     </div>
