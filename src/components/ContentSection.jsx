@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { TYPE_MOVIE, TYPE_TV } from "../services/tvAndMovieService";
 import MovieContext from "../contexts/MovieContext";
 import TVContext from "../contexts/TVContext";
 import TabList from "./commons/TabList";
+import FeaturedShowcard from "./commons/FeaturedShowCard";
 
 const TABS = [
   { title: "Movie", name: TYPE_MOVIE },
@@ -27,6 +28,7 @@ const ContentSection = () => {
         activeTab={activeTab}
         onClick={(tab) => setActiveTab(tab)}
       />
+      <FeaturedShowcard featuredShow={getFeaturedShow()} />
     </div>
   );
 };
