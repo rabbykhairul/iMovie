@@ -287,6 +287,12 @@ button {
   box-shadow: none;
 }
 
+.content-loading-card-vertical {
+  width: 30%;
+  height: 15vh;
+  box-shadow: none;
+}
+
 .line {
   background-color: rgb(235, 235, 235);
   border-radius: 0.75vw;
@@ -355,4 +361,24 @@ button {
   font-weight: 700;
   letter-spacing: 0.1vw;
   margin-bottom: 1.35vw;
+}
+
+.slider {
+  width: 100%;
+  height: fit-content;
+  margin-top: 1.25vw;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25vw;
+}
+
+.slider-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.8vw;
+  letter-spacing: 0.1vw;
+  color: rgb(25, 25, 25);
 }
