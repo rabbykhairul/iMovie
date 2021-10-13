@@ -2,7 +2,7 @@ import React from "react";
 import StarRating from "./StarRating";
 
 const RecommendationCard = (props) => {
-  const { title, label, genres, rating } = props;
+  const { title, label, genres, rating } = props.info;
 
   const renderImage = () => <div className="image-section"></div>;
 
@@ -13,7 +13,7 @@ const RecommendationCard = (props) => {
         <p>{label}</p>
       </div>
       <p>{genres.join(", ")}</p>
-      <StarRating />
+      <StarRating rating={rating} />
     </div>
   );
 

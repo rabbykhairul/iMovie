@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const TAB_ITEM_CLASSES = "tab-item text-primary";
+const TAB_ITEM_CLASSES = "tab-item";
 const ACTIVE_TAB_CLASS = "tab-active";
 
 const TabList = (props) => {
